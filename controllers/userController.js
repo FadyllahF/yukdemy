@@ -1,4 +1,4 @@
-const { User, Course } = require("../models");
+const { User, Course, Profile } = require("../models");
 
 class UserController {
   static userList(req, res) {
@@ -57,6 +57,34 @@ class UserController {
       })
       .catch((err) => {
         res.send(err);
+      });
+  }
+  static editProfileForm(req, res) {
+    const id = req.params.id;
+    console.log(+id);
+    Profile.findOne({
+      where: {
+        UserId: +id,
+      },
+    })
+      .then((result) => {
+        res.render("editProfilForm", { result });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+  static editProfile(req, res) {
+    const { ...profile } = req.body;
+    profile
+      .Update(
+        { ...profile },
+        {
+          where: { id: id },
+        }
+      )
+      .then((result) => {
+        res.redirect("/user");
       });
   }
 }

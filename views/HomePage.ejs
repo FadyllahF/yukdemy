@@ -1,15 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Home Page</title>
-  </head>
-  <body style="background-image: url(../logo-yukdemy.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 140%;">
-    <%- include('./partials/navbar.ejs') %>
-    <h1>Yukdemy</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Home Page</title>
+</head>
+
+<body style="background-image: url(../logo-yukdemy.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 140%;">
+  
+
+    
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../logo-yukdemy.png" alt="Logo" style="width:40px;" class="rounded-pill"> 
+      </a>
+      
+      <div class="container">
+        <form class="d-flex" action="" method="">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit" style="font-style: italic; color:black">Search</button>
+        </form>
+      </div>
+      
+      <div class="dropdown">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" style="font-style: italic; color:black">
+          Settings
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Register</a></li>
+            <li><a class="dropdown-item" href="#">Sign in</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+    <div class="container-fluid" style="margin-top: auto;">
+
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Los Angeles" class="d-block" style="width: 100%; height: 70%;">
+            <div class="carousel-caption container-fluid bg-warning text-black" style="padding:70px 20px;">
+              <h3>Belajar jadi Chef Handal Dalam 4 Minggu !</h3>
+              <p>belajar sekarang bayar nanti !</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Chicago" class="d-block" style="width: 100%; height: 70%;">
+            <div class="carousel-caption container-fluid bg-warning text-black" style="padding:70px 20px;">
+              <h3>Dijamin Masuk Restauran Michelin !</h3>
+              <p>yuksDemy bekerjasama dengan berbagai hiring partner Restaurant Michelin</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1571805529673-0f56b922b359?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="New York" class="d-block" style="width: 100%; height: 70%;">
+            <div class="carousel-caption container-fluid bg-warning text-black" style="padding:70px 20px;">
+              <h3>Kelihatan enak bukan?</h3>
+              <p>udh buruan daftar</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="row" style="display: table;">
+      <div class="column" style="background-color:#aaa; float: left; width: 200px; padding: auto;height: 300px;">
+        <h2>Column 1</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#bbb; float: left; width: 200px; padding: auto;height: 300px;">
+        <h2>Column 2</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#ccc; float: left; width: 200px; padding: auto;height: 300px;">
+        <h2>Column 3</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#ddd; float: left; width: 200px; padding: auto;height: 300px;">
+        <h2>Column 4</h2>
+        <p>Some text..</p>
+      </div>
+    </div>
+
+    
+
+
+</body>
+
 </html>

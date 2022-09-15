@@ -1,4 +1,5 @@
 const { Course } = require("../models");
+const { createQR } = require("../qrcode/qrcode");
 
 class CourseController {
   static courseList(req, res) {
@@ -22,6 +23,16 @@ class CourseController {
       })
       .catch((err) => {
         res.send(err);
+      });
+  }
+  static createQR(req, res) {
+    const url = req.params.url;
+    createQR(`http://localhost:3000/${url}`, 400, 100)
+      .then((result) => {
+        res.render("qrtest", { data: result });
+      })
+      .catch((err) => {
+        console.log(err, "huhu");
       });
   }
 }

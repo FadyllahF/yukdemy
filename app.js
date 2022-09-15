@@ -6,7 +6,10 @@ const session = require("express-session");
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"))
 app.use("/", router);
+
+
 
 /// ini contoh midleware // > lebih paham kalau udh nonton midleware session
 // app.use(session({

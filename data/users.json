@@ -1,116 +1,116 @@
 [
     {
-        "user": "rcroci0",
+        "userName": "rcroci0",
         "email": "hbeen0@list-manage.com",
-        "pasword": "wLE9u0KoQC",
+        "password": "wLE9u0KoQC",
         "role": "teacher"
     },
     {
-        "user": "bgolds1",
+        "userName": "bgolds1",
         "email": "lokenden1@youku.com",
-        "pasword": "VNJj1E",
+        "password": "VNJj1E",
         "role": "teacher"
     },
     {
-        "user": "jmaccauley2",
+        "userName": "jmaccauley2",
         "email": "rscotson2@bluehost.com",
-        "pasword": "kJg5K9ybFqY",
+        "password": "kJg5K9ybFqY",
         "role": "teacher"
     },
     {
-        "user": "kfaircloth3",
+        "userName": "kfaircloth3",
         "email": "gdibden3@skyrock.com",
-        "pasword": "cUjEqs6UaC",
+        "password": "cUjEqs6UaC",
         "role": "student"
     },
     {
-        "user": "rtwinn4",
+        "userName": "rtwinn4",
         "email": "dalstead4@w3.org",
-        "pasword": "polLlsQ9",
+        "password": "polLlsQ9",
         "role": "student"
     },
     {
-        "user": "bsteagall5",
+        "userName": "bsteagall5",
         "email": "gpaulack5@printfriendly.com",
-        "pasword": "YuYL15n2lGC",
+        "password": "YuYL15n2lGC",
         "role": "student"
     },
     {
-        "user": "ebushel6",
+        "userName": "ebushel6",
         "email": "oleathley6@weibo.com",
-        "pasword": "Ky50VA62FvuR",
+        "password": "Ky50VA62FvuR",
         "role": "student"
     },
     {
-        "user": "fhitzke7",
+        "userName": "fhitzke7",
         "email": "blars7@utexas.edu",
-        "pasword": "DGFaqg3U",
+        "password": "DGFaqg3U",
         "role": "student"
     },
     {
-        "user": "adillinger8",
+        "userName": "adillinger8",
         "email": "ccollishaw8@blog.com",
-        "pasword": "ulPA0rJq",
+        "password": "ulPA0rJq",
         "role": "student"
     },
     {
-        "user": "dmccalum9",
+        "userName": "dmccalum9",
         "email": "daymerich9@washington.edu",
-        "pasword": "uks7sU",
+        "password": "uks7sU",
         "role": "student"
     },
     {
-        "user": "lwistancea",
+        "userName": "lwistancea",
         "email": "igrimaa@google.com.au",
-        "pasword": "6DLDRA89N5L",
+        "password": "6DLDRA89N5L",
         "role": "student"
     },
     {
-        "user": "rcodyb",
+        "userName": "rcodyb",
         "email": "ckaufmanb@wiley.com",
-        "pasword": "wD8tnWt3",
+        "password": "wD8tnWt3",
         "role": "student"
     },
     {
-        "user": "nbumfreyc",
+        "userName": "nbumfreyc",
         "email": "lkiellorc@google.es",
-        "pasword": "l5wWNuiRA9YV",
+        "password": "l5wWNuiRA9YV",
         "role": "student"
     },
     {
-        "user": "pnellerd",
+        "userName": "pnellerd",
         "email": "hlangtryd@tinypic.com",
-        "pasword": "0fRU94",
+        "password": "0fRU94",
         "role": "student"
     },
     {
-        "user": "bchannere",
+        "userName": "bchannere",
         "email": "damare@csmonitor.com",
-        "pasword": "7BCRxdvO2",
+        "password": "7BCRxdvO2",
         "role": "student"
     },
     {
-        "user": "dmeachemf",
+        "userName": "dmeachemf",
         "email": "mquinnellyf@multiply.com",
-        "pasword": "FbESuRk3Jaxm",
+        "password": "FbESuRk3Jaxm",
         "role": "student"
     },
     {
-        "user": "gchantreeg",
+        "userName": "gchantreeg",
         "email": "miorillog@163.com",
-        "pasword": "aCmjua",
+        "password": "aCmjua",
         "role": "student"
     },
     {
-        "user": "fwakerleyh",
+        "userName": "fwakerleyh",
         "email": "bmiskimmonh@springer.com",
-        "pasword": "4tN9qgL",
+        "password": "4tN9qgL",
         "role": "student"
     },
     {
-        "user": "mpratii",
+        "userName": "mpratii",
         "email": "ngrandi@java.com",
-        "pasword": "sSSmxeQGAv0",
+        "password": "sSSmxeQGAv0",
         "role": "student"
     }
 ]

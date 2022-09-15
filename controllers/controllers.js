@@ -10,12 +10,13 @@ class Controller {
     res.render("registerForm");
   }
   static postRegister(req, res) {
-    const { userName, password, role } = req.body;
-    User.create({ userName, password, role })
+    const { userName, email, password, role } = req.body;
+    User.create({ userName, email, password, role })
       .then((newUser) => {
         res.redirect("/loginPage");
       })
       .catch((err) => {
+        console.log(err);
         res.send(err);
       });
   }
@@ -23,8 +24,8 @@ class Controller {
     res.render("loginPage");
   }
   static postLogin(req, res) {
-    const { userName, password } = req.body;
-    User.findOne({ where: { userName } })
+    const { email, password } = req.body;
+    User.findOne({ where: { email } })
       .then((user) => {
         //console.log(user);
         if (user) {
@@ -32,7 +33,7 @@ class Controller {
           if (isValidPassword) {
             return res.redirect("/");
           } else {
-            const error = "invalid username or password ";
+            const error = "invalid email or password ";
             return res.redirect(`loginPage?error=${error}`);
           }
         }

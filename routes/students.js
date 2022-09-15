@@ -1,8 +1,9 @@
 const express = require("express");
-const studentController = require("../controllers/studentController");
+const Controller = require("../controllers/controllers");
+const UserController = require("../controllers/userController");
 const router = express.Router();
 
-router.get("/", studentController.landingPage);
+router.get("/detail", UserController.studentDetail);
 // router.get("/", studentController.default);
 // router.post("/", studentController.default);
 // router.get("/", studentController.default);

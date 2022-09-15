@@ -33,5 +33,31 @@ class UserController {
         res.send(err);
       });
   }
+  static deleteUser(request, response) {
+    let id = request.params.id;
+    User.destroy({
+      where: { id: id },
+    })
+      .then((result) => {
+        response.redirect("/user");
+      })
+      .catch((err) => {
+        response.send(err);
+      });
+  }
+  static studentDetail(req, res) {
+    User.findAll({
+      include: Course,
+      where: {
+        role: "student",
+      },
+    })
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
 }
 module.exports = UserController;

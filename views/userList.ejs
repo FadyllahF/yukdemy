@@ -18,6 +18,7 @@
         <th>Email</th>
         <th>Password</th>
         <th>Role</th>
+        <th>Action</th>
       </thead>
       <tbody>
         <% result.forEach(el=>{ %>
@@ -26,6 +27,12 @@
           <td><%= el.email %></td>
           <td><%= el.password %></td>
           <td><%= el.role %></td>
+          <td>
+            <a href="/user/<%= el.id%>/delete"
+              ><button class="btn btn-outline-danger btn-sm">
+                Delete
+              </button></a
+          </td>
         </tr>
         <% }) %>
       </tbody>

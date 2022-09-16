@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "yukdemy",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "ssl": "true",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": true
+      }
+    }
+  }
+}

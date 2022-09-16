@@ -1,9 +1,20 @@
 const { Course } = require("../models");
 const { createQR } = require("../qrcode/qrcode");
+const { Op } = require("sequelize");
 
 class CourseController {
   static courseList(req, res) {
-    Course.findAll({})
+    const { search } = req.query;
+    let option = {
+      where: {},
+    };
+    if (search) {
+      option.where = {
+        ...option.where,
+        courseName: { [Op.iLike]: `%${search}%` },
+      };
+    }
+    Course.findAll(option)
       .then((result) => {
         res.render("courseList", { result });
       })
@@ -31,8 +42,18 @@ class CourseController {
       .then((result) => {
         res.render("qrtest", { data: result });
       })
+      .catch((err) => {});
+  }
+  static deleteCourse(req, res) {
+    let id = req.params.id;
+    Course.destroy({
+      where: { id: id },
+    })
+      .then((result) => {
+        res.redirect("/course");
+      })
       .catch((err) => {
-        console.log(err, "huhu");
+        res.send(err);
       });
   }
 }

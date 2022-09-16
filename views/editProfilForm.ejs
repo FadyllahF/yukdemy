@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Home Page</title>
+    <title>Edit</title>
   </head>
   <body
     style="
@@ -19,22 +19,29 @@
       background-size: 100% 140%;
     "
   >
-    <%- include('./partials/navbar.ejs') %>
-
     <div class="container">
-      <h2>Add Course</h2>
+      <h2>Edit Profile</h2>
 
-      <form action="/user/add" method="post">
+      <form action="/user/<%=result.id%>/edit" method="post">
         <label for="full name">fullname:</label><br />
-        <input type="text" name="fullName" placeholder="your full name" /><br />
-        <label for="fname">age</label><br />
+        <input
+          type="text"
+          value="<%= result.fullName%>"
+          name="fullName"
+          placeholder="your full name"
+        /><br />
         <label for="age">age</label><br />
-        <input type="nunmber" name="age" placeholder="age" /><br />
+        <input
+          type="nunmber"
+          value="<%= result.age%>"
+          name="age"
+          placeholder="age"
+        /><br />
         <br />
         <label for="fname">address:</label><br />
-        <input type="text" name="address" /><br />
+        <input type="text" value="<%= result.address%>" name="address" /><br />
         <label for="fname">UserId:</label><br />
-        <input type="text" name="UserId" /><br />
+        <input type="text" value="<%= result.UserId %>" name="UserId" /><br />
         <br />
         <input type="submit" placeholder="Submit" />
       </form>

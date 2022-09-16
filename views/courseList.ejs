@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uvatar Academy</title>
+    <title>Course</title>
   </head>
 
     <h2>Yukdemy</h2>
@@ -21,6 +21,7 @@
         <th>Video</th>
         <th>Image</th>
         <th>UserId</th>
+        <th>Action</th>
       </thead>
       <tbody>
         <% result.forEach(el=>{ %>
@@ -30,6 +31,12 @@
           <td><%= el.videoUrl %></td>
           <td><%= el.imageUrl %></td>
           <td><%= el.UserId %></td>
+          <td>
+            <a href="/course/<%= el.id%>/delete"
+              ><button class="btn btn-outline-danger btn-sm">
+                Delete
+              </button></a>
+          </td>
         </tr>
         <% }) %>
       </tbody>

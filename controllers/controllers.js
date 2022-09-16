@@ -21,7 +21,8 @@ class Controller {
       });
   }
   static loginForm(req, res) {
-    res.render("loginPage");
+    const { error } = req.query;
+    res.render("loginPage", { error });
   }
   static postLogin(req, res) {
     const { email, password } = req.body;
@@ -34,7 +35,7 @@ class Controller {
             return res.redirect("/");
           } else {
             const error = "invalid email or password ";
-            return res.redirect(`loginPage?error=${error}`);
+            return res.redirect(`/loginPage?error=${error}`);
           }
         }
       })

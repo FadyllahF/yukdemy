@@ -24,7 +24,7 @@ class UserController {
   }
   static addCourse(req, res) {
     const { courseName, description, videoUrl, imageUrl, UserId } = req.body;
-    console.log(req.body);
+    //console.log(req.body);
     Course.create({ courseName, description, videoUrl, imageUrl, UserId })
       .then((result) => {
         res.redirect("/course");
@@ -33,16 +33,16 @@ class UserController {
         res.send(err);
       });
   }
-  static deleteUser(request, response) {
-    let id = request.params.id;
+  static deleteUser(req, res) {
+    let id = req.params.id;
     User.destroy({
       where: { id: id },
     })
       .then((result) => {
-        response.redirect("/user");
+        res.redirect("/user");
       })
       .catch((err) => {
-        response.send(err);
+        res.send(err);
       });
   }
   static studentDetail(req, res) {
@@ -53,7 +53,7 @@ class UserController {
       },
     })
       .then((result) => {
-        res.send(result);
+        res.render("studentDetail", { result });
       })
       .catch((err) => {
         res.send(err);
@@ -61,7 +61,7 @@ class UserController {
   }
   static editProfileForm(req, res) {
     const id = req.params.id;
-    console.log(+id);
+    // console.log(+id);
     Profile.findOne({
       where: {
         UserId: +id,
@@ -69,6 +69,7 @@ class UserController {
     })
       .then((result) => {
         res.render("editProfilForm", { result });
+        //res.send(result);
       })
       .catch((err) => {
         res.send(err);
@@ -84,7 +85,10 @@ class UserController {
         }
       )
       .then((result) => {
-        res.redirect("/user");
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
       });
   }
 }
